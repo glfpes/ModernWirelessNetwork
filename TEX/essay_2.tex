@@ -96,8 +96,28 @@ This report does some survey on existing indoor localization methods and introdu
 Indoor localization has been worked on for years since its demand in industry is badly. We review four major representative work based on RF, acoustic, and MIMO techniques, the four main methods today in research of indoor localization. We analysis their defects to show the advancement in our work of Indoor Localization with LEDs.
 
 \subsection*{2.1 RF-based Localization \cite{Radar00} \cite{Centaur12}}
-\subsubsection*{2.1.1 RF-based Localization \cite{Radar00} \cite{Centaur12}}
-\subsubsection*{2.1.2 RF-based Localization \cite{Radar00} \cite{Centaur12}}
+WiFi-based indoor localization approaches have been the center of attention in the field of indoor localization, due to their low deployment cost, potential for reasonable accuracy and readiness to be applied to mobile devices. Existing WiFi-based solutions usually fall into one of two categories: fingerprint-based and model-based approaches. We introduce fingerprint-based method by the Radar system, and model-based by the Centaur system.
+
+While these methods have been shown to achieve promising localization accuracy (below 10 meters at 90\% tile) under lab conditions, large-scale accurate indoor localization systems have yet to be developed. For example, given realworld fingerprint sampling conditions, the localization accuracy of existing approaches in large venues like shopping malls and airports can still be up to 25m at 90\% tile; similar results are reported by Google\cite{google}
+
+\subsubsection*{2.1.1 RF-based Localization \cite{Radar00}}
+The fingeprint-based solution fingerprints locations in the area pf interest and then searches for the best matching location.
+
+The model-based solution trains a signal propagation model using training/calibration data then applies trilateration for localization. 
+
+Radar first collects fingerprints from various known locations to build up a fingerprint database. It then determines the position of an incoming fingerprint by comparing it against all fingerprints in the database, an averages the locations of a few fingerprints nearest in signal space.
+
+\begin{wrapfigure}{l}{1.0\textwidth} % Inline image example
+	\begin{center}
+		\includegraphics[width=1.0\textwidth]{Figure1.jpg}
+	\end{center}
+	\caption{Fish}
+\end{wrapfigure}
+
+\subsubsection*{2.1.2 RF-based Localization \cite{Centaur12}}
+Centaur adopts the log-distance path loss (LDPL) model and trains model parameters from fingerprints with known locations. Model parameters instead of fingerprints are stored in the location database. Trilateration or multilateration is applied to estimate the location for an incoming fingerprint.
+
+
 
 \subsection*{2.2 Acoustic-based Localization \cite{Cricket04}}
 
@@ -163,6 +183,13 @@ Ye-Sheng Kuo, Pat Pannnuto,
 Swarun Kumar, Stephanie Gil, Dina Katabi, Daniela Rus,
 ``Accurate Indoor Localization with Zero Start-up Cost.''
 \textit{ACM Mobicom},2014.
+
+
+\bibitem[1]{google}
+Googlers Talk Indoor Maps For 40 Minutes,
+``http://www.webpronews.com/googlers-talk-\\indoor-maps-for-40-minutes-video-2013-05.''
+\textit{}.
+
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------

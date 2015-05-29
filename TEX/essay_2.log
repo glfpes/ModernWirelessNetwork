@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.23)  28 MAY 2015 11:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.23)  29 MAY 2015 16:43
 entering extended mode
 **essay_2.tex
-(C:\Users\glfpes\Desktop\essay1\essay_2.tex
+(C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 (D:\CTEX\MiKTeX\tex\latex\base\article.cls
@@ -88,7 +88,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(C:\Users\glfpes\Desktop\essay1\essay_2.aux)
+(C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
 LaTeX Font Info:    ... okay on input line 63.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
@@ -147,36 +147,454 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 99.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 103.
 
-<fish.png, id=8, 211.79124pt x 158.5925pt>
-File: fish.png Graphic file (type png)
- <use fish.png>
-Package pdftex.def Info: fish.png used on input line 106.
-(pdftex.def)             Requested size: 136.80176pt x 102.4426pt.
+[2] <Figure1.jpg, id=11, 192.16301pt x 98.58798pt>
+File: Figure1.jpg Graphic file (type jpg)
+ <use Figure1.jpg>
+Package pdftex.def Info: Figure1.jpg used on input line 112.
+(pdftex.def)             Requested size: 360.0pt x 184.70154pt.
 
-Underfull \hbox (badness 5105) in paragraph at lines 103--109
-\T1/ppl/m/n/10.95 (+20) nean non ris-us eu nunc ac-cum-san condi-men-tum at sed
- ip-sum.
+Overfull \hbox (31.89995pt too wide) in paragraph at lines 117--117
+[][]\T1/ppl/b/n/10.95 2.1.2
  []
 
-[2 <C:/Users/glfpes/Desktop/essay1/fish.png>] [3] [4]
-(C:\Users\glfpes\Desktop\essay1\essay_2.aux) ) 
+
+Overfull \hbox (25.82257pt too wide) in paragraph at lines 117--117
+\T1/ppl/b/n/10.95 RF-
+ []
+
+
+Overfull \hbox (39.19257pt too wide) in paragraph at lines 117--117
+\T1/ppl/b/n/10.95 based
+ []
+
+
+Overfull \hbox (24.60715pt too wide) in paragraph at lines 117--117
+\T1/ppl/b/n/10.95 Lo-
+ []
+
+
+Overfull \hbox (25.81161pt too wide) in paragraph at lines 117--117
+\T1/ppl/b/n/10.95 cal-
+ []
+
+
+Overfull \hbox (26.42488pt too wide) in paragraph at lines 117--117
+\T1/ppl/b/n/10.95 iza-
+ []
+
+
+Overfull \hbox (30.07115pt too wide) in paragraph at lines 117--117
+\T1/ppl/b/n/10.95 tion
+ []
+
+
+Overfull \hbox (89.36508pt too wide) in paragraph at lines 117--117
+\T1/ppl/b/n/10.95 [[]] 
+ []
+
+
+Overfull \hbox (48.3477pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) Centaur
+ []
+
+
+Overfull \hbox (39.48424pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) adopt-
+ []
+
+
+Overfull \hbox (14.54993pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) s
+ []
+
+
+Overfull \hbox (24.8836pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) the
+ []
+
+
+Overfull \hbox (26.70372pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) log-
+ []
+
+
+Overfull \hbox (49.24277pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) distance
+ []
+
+
+Overfull \hbox (31.22974pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) path
+ []
+
+
+Overfull \hbox (28.08154pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) loss
+ []
+
+
+Overfull \hbox (29.83011pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) (LD-
+ []
+
+
+Overfull \hbox (25.51643pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) PL)
+ []
+
+
+Overfull \hbox (33.64679pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) mod-
+ []
+
+
+Overfull \hbox (18.26268pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) el
+ []
+
+
+Overfull \hbox (28.1675pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) and
+ []
+
+
+Overfull \hbox (34.22601pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) train-
+ []
+
+
+Overfull \hbox (14.54993pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) s
+ []
+
+
+Overfull \hbox (33.64679pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) mod-
+ []
+
+
+Overfull \hbox (18.26268pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) el
+ []
+
+
+Overfull \hbox (23.24187pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) pa-
+ []
+
+
+Overfull \hbox (30.83527pt too wide) in paragraph at lines 118--119
+\T1/ppl/m/n/10.95 (-20) ram-
+ []
+
+
+Overfull \hbox (25.0pt too wide) in paragraph at lines 122--122
+[]\T1/ppl/b/n/12 2.2
+ []
+
+
+Overfull \hbox (58.85143pt too wide) in paragraph at lines 122--122
+\T1/ppl/b/n/12 Acoustic-
+ []
+
+
+Overfull \hbox (41.9919pt too wide) in paragraph at lines 122--122
+\T1/ppl/b/n/12 based
+ []
+
+
+Overfull \hbox (26.00786pt too wide) in paragraph at lines 122--122
+\T1/ppl/b/n/12 Lo-
+ []
+
+
+Overfull \hbox (27.32784pt too wide) in paragraph at lines 122--122
+\T1/ppl/b/n/12 cal-
+ []
+
+
+Overfull \hbox (27.99991pt too wide) in paragraph at lines 122--122
+\T1/ppl/b/n/12 iza-
+ []
+
+
+Overfull \hbox (31.99582pt too wide) in paragraph at lines 122--122
+\T1/ppl/b/n/12 tion
+ []
+
+
+Overfull \hbox (92.96748pt too wide) in paragraph at lines 122--122
+\T1/ppl/b/n/12 [[]] 
+ []
+
+
+Overfull \hbox (25.0pt too wide) in paragraph at lines 124--124
+[]\T1/ppl/b/n/12 2.3
+ []
+
+
+Overfull \hbox (50.66779pt too wide) in paragraph at lines 124--124
+\T1/ppl/b/n/12 MIMO-
+ []
+
+
+Overfull \hbox (41.9919pt too wide) in paragraph at lines 124--124
+\T1/ppl/b/n/12 based
+ []
+
+
+Overfull \hbox (26.00786pt too wide) in paragraph at lines 124--124
+\T1/ppl/b/n/12 Lo-
+ []
+
+
+Overfull \hbox (27.32784pt too wide) in paragraph at lines 124--124
+\T1/ppl/b/n/12 cal-
+ []
+
+
+Overfull \hbox (27.99991pt too wide) in paragraph at lines 124--124
+\T1/ppl/b/n/12 iza-
+ []
+
+
+Overfull \hbox (31.99582pt too wide) in paragraph at lines 124--124
+\T1/ppl/b/n/12 tion
+ []
+
+
+Overfull \hbox (100.97137pt too wide) in paragraph at lines 124--124
+\T1/ppl/b/n/12 [[]] 
+ []
+
+
+Package wrapfig Warning: wrapfigure used inside a conflicting environment on in
+put line 127.
+
+<fish.png, id=12, 211.79124pt x 158.5925pt>
+File: fish.png Graphic file (type png)
+ <use fish.png>
+Package pdftex.def Info: fish.png used on input line 129.
+(pdftex.def)             Requested size: 136.80176pt x 102.4426pt.
+
+Overfull \hbox (31.76233pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) Cras
+ []
+
+
+Overfull \hbox (36.51172pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) gravi-
+ []
+
+
+Overfull \hbox (23.23611pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) da,
+ []
+
+
+Overfull \hbox (21.44566pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) es-
+ []
+
+
+Overfull \hbox (13.49817pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) t
+ []
+
+
+Overfull \hbox (17.51198pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) v-
+ []
+
+
+Overfull \hbox (18.26268pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) el
+ []
+
+
+Overfull \hbox (21.12367pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) in-
+ []
+
+
+Overfull \hbox (24.43555pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) ter-
+ []
+
+
+Overfull \hbox (32.50273pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) dum
+ []
+
+
+Overfull \hbox (23.36642pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) eu-
+ []
+
+
+Overfull \hbox (19.42822pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) is-
+ []
+
+
+Overfull \hbox (33.20511pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) mod,
+ []
+
+
+Overfull \hbox (25.15456pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) tor-
+ []
+
+
+Overfull \hbox (23.37692pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) tor
+ []
+
+
+Overfull \hbox (22.59804pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) mi
+ []
+
+
+Overfull \hbox (36.5722pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) lobor-
+ []
+
+
+Overfull \hbox (21.17072pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) tis
+ []
+
+
+Overfull \hbox (23.91203pt too wide) in paragraph at lines 126--132
+\T1/ppl/m/n/10.95 (-20) mi,
+ []
+
+[3 <C:/Users/glfpes/Documents/GitHub/ModernWirelessNetwork/TEX/Figure1.jpg>]
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 13
+2.
+
+
+Overfull \hbox (51.48773pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) Aliquam
+ []
+
+
+Overfull \hbox (47.87976pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) fringilla
+ []
+
+
+Overfull \hbox (28.34982pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) non
+ []
+
+
+Overfull \hbox (21.43492pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) di-
+ []
+
+
+Overfull \hbox (24.84091pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) am
+ []
+
+
+Overfull \hbox (26.24661pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) sed
+ []
+
+
+Overfull \hbox (26.91911pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) var-
+ []
+
+
+Overfull \hbox (24.90973pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) ius.
+ []
+
+
+Overfull \hbox (28.41005pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) Sus-
+ []
+
+
+Overfull \hbox (51.4253pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) pendisse
+ []
+
+
+Overfull \hbox (23.51653pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) tel-
+ []
+
+
+Overfull \hbox (24.14323pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) lus
+ []
+
+
+Overfull \hbox (20.46912pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) fe-
+ []
+
+
+Overfull \hbox (22.10916pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) lis,
+ []
+
+
+Overfull \hbox (29.38649pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) hen-
+ []
+
+
+Overfull \hbox (36.5978pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) drerit
+ []
+
+
+Overfull \hbox (28.34982pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) non
+ []
+
+
+Overfull \hbox (38.13199pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) biben-
+ []
+
+
+Overfull \hbox (32.50273pt too wide) in paragraph at lines 132--134
+\T1/ppl/m/n/10.95 (-20) dum
+ []
+
+[4] [5 <C:/Users/glfpes/Documents/GitHub/ModernWirelessNetwork/TEX/fish.png>]
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
+[]\T1/ppl/m/n/10.95 (+20) Googlers Talk In-door Map-s For 40 Min-utes,
+ []
+
+[7] (C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux) ) 
 Here is how much of TeX's memory you used:
- 2979 strings out of 495354
- 43566 string characters out of 3183859
- 119480 words of memory out of 3000000
- 6025 multiletter control sequences out of 15000+200000
- 31095 words of font info for 122 fonts, out of 3000000 for 9000
+ 2995 strings out of 495354
+ 43920 string characters out of 3183859
+ 118483 words of memory out of 3000000
+ 6030 multiletter control sequences out of 15000+200000
+ 31572 words of font info for 128 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,6n,35p,1003b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/CTEX/MiKTeX/fonts/enc/dvips/f
-ontname/8r.enc}<D:/CTEX/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/CTEX/MiK
-TeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/palatin
-o/uplri8a.pfb>
-Output written on essay_2.pdf (4 pages, 81011 bytes).
+ 30i,6n,35p,1003b,228s stack positions out of 5000i,500n,10000p,200000b,50000s
+{
+D:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/CTEX/MiKTeX/fonts/type1/urw/
+palatino/uplb8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/CTE
+X/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on essay_2.pdf (7 pages, 153066 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
+ 42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 28166 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 28171 words of extra memory for PDF output out of 29859 (max. 10000000)
 
