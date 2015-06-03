@@ -107,46 +107,44 @@ The model-based solution trains a signal propagation model using training/calibr
 
 Radar first collects fingerprints from various known locations to build up a fingerprint database. It then determines the position of an incoming fingerprint by comparing it against all fingerprints in the database, an averages the locations of a few fingerprints nearest in signal space.
 
-\begin{wrapfigure}{l}{1.0\textwidth} % Inline image example
-	\begin{center}
-		\includegraphics[width=1.0\textwidth]{Figure1.jpg}
-	\end{center}
-	\caption{Fish}
-\end{wrapfigure}
+\begin{figure}[h]
+	\centering 
+	\includegraphics[width=0.8\linewidth]{Figure1.jpg}
+	\caption{An office aera for data collection. Each red dot represents a sampling location. One fingerprint is collected for each location.\cite{Modellet14}}
+	\label{fig:subfig}
+\end{figure}
 
 \subsubsection*{2.1.2 RF-based Localization \cite{Centaur12}}
 Centaur adopts the log-distance path loss (LDPL) model and trains model parameters from fingerprints with known locations. Model parameters instead of fingerprints are stored in the location database. Trilateration or multilateration is applied to estimate the location for an incoming fingerprint.
 
+Centaur and Radar are rooted at the irregularity of a \emph{radio map}, a map of signal strengths at different locations, and the ability to approximate the radio map from training data. The localization process is actually a process to find the best match(es) to a given fingerprint from the radio map and return the position of the best match(es). The better we can approximate the actual radio map, the better the localization accuracy that can be achieved.
 
+When the training data are sparse, the radio map cannot be well approximated with few fingerprints. However, under the assumption of a radio propagation model, the radio map can be better approximated. The model requires only a few samples to train the model parameter. On the contrary, when the training data are dense, distances between fingerprints are close. Thus, direct use of the fingerprints can well approximate the radio map, whereas an oversimplified omni-model will lead to a high fitness error.\cite{Modellet14}
 
 \subsection*{2.2 Acoustic-based Localization \cite{Cricket04}}
+Some systems exploits the acoustic band into the field of indoor localization. The Cricket system \cite{Cricket04} use a difference of ultrasound and RF signal time-of-flight measurement technique to provide location. The system requires to establish several anchor points in the indoor environment, each point can publish RF packets and ultrasonic signals. The workflow presents as below: 
+
+\begin{enumerate}
+	\item Beacons publish information on an RF channel. With each RF advertisement, the beacon transmits a concurrent ultrasonic pulse.
+	\item Listeners attached to devices and mobiles listen for RF signals, and upon receipt of the first few bits, listen for the corresponding ultrasonic pulse.
+	\item Cricket exploits the difference of time-of-arrival of the paired signals to judge its distance with the Beacon source. By analysing different beacons, Cricket locate the listener's place with the help of trilateration or multilateration mathmatical methods.
+\end{enumerate}
+
+Cricket can reach high precise of several centimeters. However the drawback is its heavy hardware deployment requirement that limits its deployment.
+
 
 \subsection*{2.3 MIMO-based Localization \cite{Ubicarse14}}
+MIMO technology develops rapidly recently in RF communication field. By exploiting multiple antennas, one device can locate its place precisely with the aid of multiple APs in the environment. Ubicarse exploits the fact that today's tablets and smartphones have two or at most three antennas. This system make use of these antennas to form a MIMO system. However only two-antennas MIMO can't get a good localization output, so Ubicarse defines a rotate movement, that the user rotates the two-antennas MIMO to form a circular antenna array, by the simulated antenna array the system can get a considerable improvement in precise of less than 30 centimeters.
 
-Cras gravida, est vel interdum euismod, tortor mi lobortis mi, quis adipiscing elit lacus ut orci. Phasellus nec fringilla nisi, ut vestibulum neque. Aenean non risus eu nunc accumsan condimentum at sed ipsum.
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-\begin{center}
-\includegraphics[width=0.38\textwidth]{fish.png}
-\end{center}
-\caption{Fish}
-\end{wrapfigure}
-Aliquam fringilla non diam sed varius. Suspendisse tellus felis, hendrerit non bibendum ut, adipiscing vitae diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis purus eget nisl scelerisque, commodo rhoncus lacus porta. Vestibulum vitae turpis tincidunt, varius dolor in, dictum lectus. Aenean ac ornare augue, ac facilisis purus. Sed leo lorem, molestie sit amet fermentum id, suscipit ut sem. Vestibulum orci arcu, vehicula sed tortor id, ornare dapibus lorem. Praesent aliquet iaculis lacus nec fermentum. Morbi eleifend blandit dolor, pharetra hendrerit neque ornare vel. Nulla ornare, nisl eget imperdiet ornare, libero enim interdum mi, ut lobortis quam velit bibendum nibh.
-
-Morbi tempor congue porta. Proin semper, leo vitae faucibus dictum, metus mauris lacinia lorem, ac congue leo felis eu turpis. Sed nec nunc pellentesque, gravida eros at, porttitor ipsum. Praesent consequat urna a lacus lobortis ultrices eget ac metus. In tempus hendrerit rhoncus. Mauris dignissim turpis id sollicitudin lacinia. Praesent libero tellus, fringilla nec ullamcorper at, ultrices id nulla. Phasellus placerat a tellus a malesuada.
 
 %------------------------------------------------
 
 \section*{3. Problem Definition and Algorithm of Luxapose}
+Other systems such as Luxapose exploits the Visible Light Communication (VLC) technique. Luxapose use LED luminaries as visual light beacons. Landmarks are visible and distinguishable from each other. Location information is encoded by controllable frequencies. A phone receives these transmissions using its camera. By decoding the received signal, the phone get the location it lies.
 
-Fusce in nibh augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In dictum accumsan sapien, ut hendrerit nisi. Phasellus ut nulla mauris. Phasellus sagittis nec odio sed posuere. Vestibulum porttitor dolor quis suscipit bibendum. Mauris risus lectus, cursus vitae hendrerit posuere, congue ac est. Suspendisse commodo eu eros non cursus. Mauris ultrices venenatis dolor, sed aliquet odio tempor pellentesque. Duis ultricies, mauris id lobortis vulputate, tellus turpis eleifend elit, in gravida leo tortor ultricies est. Maecenas vitae ipsum at dui sodales condimentum a quis dui. Nam mi sapien, lobortis ac blandit eget, dignissim quis nunc.
+Using LED luminaries has an obvirous advantange that it needs hardly additional devices besides the LED luminaries, which distributed everywhere in modern indoor buildings. It also needs smartphones with cameras which are ubiquitous in modern society.
 
-\begin{enumerate}
-\item First numbered list item
-\item Second numbered list item
-\end{enumerate}
-
-Donec luctus tincidunt mauris, non ultrices ligula aliquam id. Sed varius, magna a faucibus congue, arcu tellus pellentesque nisl, vel laoreet magna eros et magna. Vivamus lobortis elit eu dignissim ultrices. Fusce erat nulla, ornare at dolor quis, rhoncus venenatis velit. Donec sed elit mi. Sed semper tellus a convallis viverra. Maecenas mi lorem, placerat sit amet sem quis, adipiscing tincidunt turpis. Cras a urna et tellus dictum eleifend. Fusce dignissim lectus risus, in bibendum tortor lacinia interdum.
-
+Apart from this, the ex
 
 \section*{4. System Modules Implementation}
 
@@ -189,6 +187,11 @@ Swarun Kumar, Stephanie Gil, Dina Katabi, Daniela Rus,
 Googlers Talk Indoor Maps For 40 Minutes,
 ``http://www.webpronews.com/googlers-talk-\\indoor-maps-for-40-minutes-video-2013-05.''
 \textit{}.
+
+\bibitem[2]{Modellet14}
+Liqun Li, Guobin Shen
+``Experiencing and Handling the Diversity in Data Density and Environmental Locality in an Indoor Positioning Service''
+\textit{ACM Mobicom},2014.
 
 \end{thebibliography}
 
