@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.23)  2 JUN 2015 20:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.23)  5 JUN 2015 11:12
 entering extended mode
 **essay_2.tex
 (C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.tex
@@ -77,6 +77,26 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 \WF@everypar=\toks16
 Package: wrapfig 2003/01/31  v 3.6
 )
+(D:\CTEX\MiKTeX\tex\latex\booktabs\booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen108
+\lightrulewidth=\dimen109
+\cmidrulewidth=\dimen110
+\belowrulesep=\dimen111
+\belowbottomsep=\dimen112
+\aboverulesep=\dimen113
+\abovetopsep=\dimen114
+\cmidrulesep=\dimen115
+\cmidrulekern=\dimen116
+\defaultaddspace=\dimen117
+\@cmidla=\count90
+\@cmidlb=\count91
+\@aboverulesep=\dimen118
+\@belowrulesep=\dimen119
+\@thisruleclass=\count92
+\@lastruleclass=\count93
+\@thisrulewidth=\dimen120
+)
 (D:\CTEX\MiKTeX\tex\latex\psnfss\mathpazo.sty
 Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup4
@@ -88,25 +108,28 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 63.
+(C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux
 
-(D:\CTEX\MiKTeX\tex\latex\psnfss\t1ppl.fd
+LaTeX Warning: Label `fig:subfig' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 64.
+ (D:\CTEX\MiKTeX\tex\latex\psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
-LaTeX Info: Redefining \microtypecontext on input line 63.
+LaTeX Info: Redefining \microtypecontext on input line 64.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -122,60 +145,99 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 (D:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count90
-\scratchdimen=\dimen108
+\scratchcounter=\count94
+\scratchdimen=\dimen121
 \scratchbox=\box27
-\nofMPsegments=\count91
-\nofMParguments=\count92
+\nofMPsegments=\count95
+\nofMParguments=\count96
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count93
-\MPscratchDim=\dimen109
-\MPnumerator=\count94
-\makeMPintoPDFobject=\count95
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen122
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
 \everyMPtoPDFconversion=\toks18
 )
-\big@size=\dimen110
+\big@size=\dimen123
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 65.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 66.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 73.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 85.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 86.
  [1
 
 {D:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 98.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 99.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 103.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 104.
 
 [2] <Figure1.jpg, id=11, 192.16301pt x 98.58798pt>
 File: Figure1.jpg Graphic file (type jpg)
  <use Figure1.jpg>
-Package pdftex.def Info: Figure1.jpg used on input line 112.
+Package pdftex.def Info: Figure1.jpg used on input line 113.
 (pdftex.def)             Requested size: 288.0011pt x 147.76123pt.
  [3 <C:/Users/glfpes/Documents/GitHub/ModernWirelessNetwork/TEX/Figure1.jpg>] [
 4]
-Underfull \hbox (badness 10000) in paragraph at lines 185--188
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 150.
+
+
+(D:\CTEX\MiKTeX\tex\latex\psnfss\ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 150
+.
+
+(D:\CTEX\MiKTeX\tex\latex\psnfss\omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 150
+.
+
+(D:\CTEX\MiKTeX\tex\latex\psnfss\omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 150
+.
+
+(D:\CTEX\MiKTeX\tex\latex\psnfss\omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 150
+.
+
+(D:\CTEX\MiKTeX\tex\latex\psnfss\ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+) [5]
+<Figure2.png, id=21, 244.66406pt x 118.94438pt>
+File: Figure2.png Graphic file (type png)
+ <use Figure2.png>
+Package pdftex.def Info: Figure2.png used on input line 172.
+(pdftex.def)             Requested size: 288.0011pt x 140.01555pt.
+ [6 <C:/Users/glfpes/Documents/GitHub/ModernWirelessNetwork/TEX/Figure2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 220--223
 []\T1/ppl/m/n/10.95 (+20) Googlers Talk In-door Map-s For 40 Min-utes,
  []
 
-[5] (C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux) ) 
+[7] (C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3003 strings out of 495354
- 43977 string characters out of 3183859
- 118494 words of memory out of 3000000
- 6028 multiletter control sequences out of 15000+200000
- 32208 words of font info for 136 fonts, out of 3000000 for 9000
+ 3194 strings out of 495354
+ 46839 string characters out of 3183859
+ 120221 words of memory out of 3000000
+ 6172 multiletter control sequences out of 15000+200000
+ 38891 words of font info for 164 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,5n,35p,1003b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
-{
-D:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/CTEX/MiKTeX/fonts/type1/urw/
-palatino/uplb8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/CTE
-X/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on essay_2.pdf (5 pages, 139531 bytes).
+ 30i,8n,35p,1003b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/CTEX/MiKTeX/fonts/type1/u
+rw/palatino/uplb8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/
+CTEX/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on essay_2.pdf (7 pages, 197144 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 28166 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 32779 words of extra memory for PDF output out of 35830 (max. 10000000)
 

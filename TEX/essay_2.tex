@@ -24,6 +24,7 @@
 \usepackage[protrusion=true,expansion=true]{microtype} % Better typography
 \usepackage{graphicx} % Required for including pictures
 \usepackage{wrapfig} % Allows in-line images
+\usepackage{booktabs}
 
 \usepackage{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Required for accented characters
@@ -142,12 +143,44 @@ MIMO technology develops rapidly recently in RF communication field. By exploiti
 \section*{3. Problem Definition and Algorithm of Luxapose}
 Other systems such as Luxapose exploits the Visible Light Communication (VLC) technique. Luxapose use LED luminaries as visual light beacons. Landmarks are visible and distinguishable from each other. Location information is encoded by controllable frequencies. A phone receives these transmissions using its camera. By decoding the received signal, the phone get the location it lies.
 
-Using LED luminaries has an obvirous advantange that it needs hardly additional devices besides the LED luminaries, which distributed everywhere in modern indoor buildings. It also needs smartphones with cameras which are ubiquitous in modern society.
+Using LED luminaries has an obvirous advantange that it needs hardly additional devices besides the LED luminaries, which distributed everywhere in modern indoor buildings. It also needs smartphones with cameras which are ubiquitous in modern society. And it can reach a high accuracy of 0.1m, can be viewed as one of the most precise methods in the field of IPS. The table below specifically shows the performance of the surveyed five indoor positioning systems.
 
-Apart from this, the ex
+\begin{table}[htbp]	
+	\centering 
+	\begin{tabular}{lclclclclcl}
+		\toprule
+		Param & Radar & Centaur & Cricket & Ubicarse & Luxapose \\
+		\midrule
+		Reference & \cite{Radar00} & \cite{Centaur12} & \cite{Cricket04} & \cite{Ubicarse14} & \cite{Luxapose14}\\
+		Position & 3-5m & 2-7m & 0.1m & 0.3m & 0.1m\\
+		Method & FP & Model & DC & MIMO & AoA\\
+		Database & YES & YES & YES & NO & NO\\
+		\bottomrule
+	\end{tabular}
+	\caption{\label{tab:test}Performance of Surveyed IPS.FP, DC, AoA are FingerPrinting, Device Configuration, Angle-of-Arrival}
+\end{table}
+
+
+Luxapose consists of visible light beacons, smartphones with camera to take pictures, and a server that work together to determine the location of smartphone given its token pictures. For each beacon, it consists of a programmable microcontroller that controls LEDs to blink at specific frequencies that can broadcast its location information. For the smartphone camera, it needs to modify its camera parameters such as exposure time, ISO, in order to take high quality images that can reflect the beacon's rolling shutter effect. The server work with token pictures, and do a image processing pipeline to read frequency informations from the picture, then apply AoA(Angle-of-Arrival) algorithm to calculate the absolute location of the smartphone.
+
+The main idea is AoA algorithm. AoA is a projection algorithm that can get the relative location of a given object with the aid of a picture of it. It needs three or more led beacons with known 3-D coordinates and these beacons can be located in an image captured by a smartphone, and they are visible and distinguishable from each other. Assuming that the camera geometry is known and the pixels onto which the beacons are projected is determined, we estimate the position and orientation of the smartphone with respect to the beacons' coordinate system through the geometry of similar triangles, using a variation on the well-known bearings-only robot localization and mapping problem\cite{AoA}.
+
+In order to determine the corresponding relationship between beacons and transmitters on the image, we exploit the rolling shutter effect to find the pairing relationship. Rolling shutter effect is that image capture is by scanning across the scene rapidly vertically or horizontally. Not all parts of the image of the scene are recorded at exactly the same instant. So one picture, if we set the camera's exposure time at small, we can take the blink of beacons at a small time interval. The captured image will show stripes that can reflect the frequency of the LED beacons, which can be decoded by image processing ways to take as a metric that can bind the corresponding transmitters in the image with the physical LED beacon. Below shows a significant difference in rolling shutter effect against a normally captured same LED beacon.
+
+\begin{figure}[h]
+	\centering 
+	\includegraphics[width=0.8\linewidth]{Figure2.png}
+	\caption{Rolling shutter effect}
+	\label{fig:subfig}
+\end{figure}
 
 \section*{4. System Modules Implementation}
-
+The system is implemented in four main modules. The four modules are presented below:
+\begin{enumerate}
+	\item Beacon Controller. It was implemented with Arduino DUE board. We presented five LEDs in one beacon for redundant.
+	\item Camera. We use Lumia 1020 since it has an excellent performance in taking pictures with 4.1M pixels. We modified an open source WinPhone camera application \textit{Nokia Camera Explorer\cite{NCE}}. 
+	\item Image Process Pipeline. It was deployed on the server with OpenCV, and its purpose is 
+\end{enumerate}
 
 \section*{5. Evaluation and Conclusion}
 
@@ -157,41 +190,52 @@ Apart from this, the ex
 
 \begin{thebibliography}{10}
 	
-\bibitem[Radar (2000)]{Radar00}
+\bibitem[1]{Radar00}
 P.Bahl, V.N. Padmanabhan,
 ``Radar: An in-building RF-Based User Location and Tracking System.''
 \textit{Proc. of IEEE INFOCOM}, volumn 2, pp. 775-784, 2000.
 
-\bibitem[Cricket (2004)]{Cricket04}
+\bibitem[2]{Cricket04}
 Nissanka Bodhi Priyantha,
 ``The Cricket Indoor Location System.''
 \textit{ACM SIGCOMM},2004.
 
-\bibitem[Centaur (2012)]{Centaur12}
+\bibitem[3]{Centaur12}
 R.Nandakumar, K.K.Chintalapudi, and V.N.Padmanabhan,
 ``Centaur: Locating Devices in an Office Environment.''
 \textit{ACM Mobicom},2012.
 
-\bibitem[Luxapose (2014)]{Luxapose14}
+\bibitem[4]{Luxapose14}
 Ye-Sheng Kuo, Pat Pannnuto,
 ``Luxapose: Indoor Positioning with Mobile Phones and Visible Light.''
 \textit{ACM Mobicom},2014.
 
-\bibitem[Ubicarse (2014)]{Ubicarse14}
+\bibitem[5]{Ubicarse14}
 Swarun Kumar, Stephanie Gil, Dina Katabi, Daniela Rus,
 ``Accurate Indoor Localization with Zero Start-up Cost.''
 \textit{ACM Mobicom},2014.
 
 
-\bibitem[1]{google}
+\bibitem[6]{google}
 Googlers Talk Indoor Maps For 40 Minutes,
 ``http://www.webpronews.com/googlers-talk-\\indoor-maps-for-40-minutes-video-2013-05.''
 \textit{}.
 
-\bibitem[2]{Modellet14}
+\bibitem[7]{Modellet14}
 Liqun Li, Guobin Shen
 ``Experiencing and Handling the Diversity in Data Density and Environmental Locality in an Indoor Positioning Service''
 \textit{ACM Mobicom},2014.
+
+\bibitem[8]{NCE}
+Microsoft
+``https://github.com/Microsoft/camera-explorer''
+\textit{}
+
+\bibitem[9]{AoA}
+M.C.Dean
+``Bearings-Only Localization and Mapping.''
+\textit{PhD thesis, Carnegie Mellon University},2005.
+
 
 \end{thebibliography}
 
