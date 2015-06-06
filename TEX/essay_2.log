@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.23)  5 JUN 2015 11:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.23)  6 JUN 2015 18:29
 entering extended mode
 **essay_2.tex
 (C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.tex
@@ -112,6 +112,9 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 
 LaTeX Warning: Label `fig:subfig' multiply defined.
 
+
+LaTeX Warning: Label `fig:subfig' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
@@ -214,30 +217,37 @@ File: Figure2.png Graphic file (type png)
  <use Figure2.png>
 Package pdftex.def Info: Figure2.png used on input line 172.
 (pdftex.def)             Requested size: 288.0011pt x 140.01555pt.
- [6 <C:/Users/glfpes/Documents/GitHub/ModernWirelessNetwork/TEX/Figure2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+
+<Figure3.jpg, id=23, 406.51875pt x 228.855pt>
+File: Figure3.jpg Graphic file (type jpg)
+ <use Figure3.jpg>
+Package pdftex.def Info: Figure3.jpg used on input line 191.
+(pdftex.def)             Requested size: 288.0011pt x 162.13898pt.
+ [6 <C:/Users/glfpes/Documents/GitHub/ModernWirelessNetwork/TEX/Figure2.png>] [
+7 <C:/Users/glfpes/Documents/GitHub/ModernWirelessNetwork/TEX/Figure3.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 237--240
 []\T1/ppl/m/n/10.95 (+20) Googlers Talk In-door Map-s For 40 Min-utes,
  []
 
-[7] (C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux)
+[8] (C:\Users\glfpes\Documents\GitHub\ModernWirelessNetwork\TEX\essay_2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3194 strings out of 495354
- 46839 string characters out of 3183859
+ 3193 strings out of 495354
+ 46862 string characters out of 3183859
  120221 words of memory out of 3000000
- 6172 multiletter control sequences out of 15000+200000
- 38891 words of font info for 164 fonts, out of 3000000 for 9000
+ 6176 multiletter control sequences out of 15000+200000
+ 38573 words of font info for 160 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,8n,35p,1003b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,35p,1003b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/CTEX/MiKTeX/fonts/type1/u
 rw/palatino/uplb8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/
 CTEX/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on essay_2.pdf (7 pages, 197144 bytes).
+Output written on essay_2.pdf (8 pages, 235981 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 32779 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 32784 words of extra memory for PDF output out of 35830 (max. 10000000)
 
