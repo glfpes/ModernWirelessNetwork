@@ -135,8 +135,13 @@ Cricket can reach high precise of several centimeters. However the drawback is i
 
 
 \subsection*{2.3 MIMO-based Localization \cite{Ubicarse14}}
-MIMO technology develops rapidly recently in RF communication field. By exploiting multiple antennas, one device can locate its place precisely with the aid of multiple APs in the environment. Ubicarse exploits the fact that today's tablets and smartphones have two or at most three antennas. This system make use of these antennas to form a MIMO system. However only two-antennas MIMO can't get a good localization output, so Ubicarse defines a rotate movement, that the user rotates the two-antennas MIMO to form a circular antenna array, by the simulated antenna array the system can get a considerable improvement in precise of less than 30 centimeters.
-
+MIMO technology develops rapidly recently in RF communication field. By exploiting multiple antennas, one device can locate its place precisely with the aid of multiple APs in the environment. Ubicarse exploits the fact that today's tablets and smartphones have two or at most three antennas. This system make use of these antennas to form a MIMO system. However only two-antennas MIMO can't get a good localization output, so Ubicarse defines a rotate movement, that the user rotates the two-antennas MIMO to form a circular antenna array as shown in Figure 2, by the simulated antenna array the system can get a considerable improvement in precise of less than 30 centimeters.
+\begin{figure}[h]
+	\centering 
+	\includegraphics[width=0.8\linewidth]{Figure4.png}
+	\caption{Virutual MIMO array of Ubicarse}
+	\label{fig:subfig}
+\end{figure}
 
 %------------------------------------------------
 
@@ -165,7 +170,7 @@ Luxapose consists of visible light beacons, smartphones with camera to take pict
 
 The main idea is AoA algorithm. AoA is a projection algorithm that can get the relative location of a given object with the aid of a picture of it. It needs three or more led beacons with known 3-D coordinates and these beacons can be located in an image captured by a smartphone, and they are visible and distinguishable from each other. Assuming that the camera geometry is known and the pixels onto which the beacons are projected is determined, we estimate the position and orientation of the smartphone with respect to the beacons' coordinate system through the geometry of similar triangles, using a variation on the well-known bearings-only robot localization and mapping problem\cite{AoA}.
 
-In order to determine the corresponding relationship between beacons and transmitters on the image, we exploit the rolling shutter effect to find the pairing relationship. When capturing an image, most CMOS imagers expose one or more columns of pixels, but read out only one column at a time, sweeping across the image at a fixed scan rate to create a rolling shutter, as shown in Figure 2. When a rapidly modulated LED is captured with a CMOS imager, the result is a banding effect in the image in which some columns capture the LED when it is on and others when it is off. This effect is neither visible to the naked eye, nor in a photograph that uses an auto-exposure setting. However, the rolling shutter effect is visible when an image is captured using a short exposure time. And this is what we need to do with the module of an image capturer.
+In order to determine the corresponding relationship between beacons and transmitters on the image, we exploit the rolling shutter effect to find the pairing relationship. When capturing an image, most CMOS imagers expose one or more columns of pixels, but read out only one column at a time, sweeping across the image at a fixed scan rate to create a rolling shutter, as shown in Figure 3. When a rapidly modulated LED is captured with a CMOS imager, the result is a banding effect in the image in which some columns capture the LED when it is on and others when it is off. This effect is neither visible to the naked eye, nor in a photograph that uses an auto-exposure setting. However, the rolling shutter effect is visible when an image is captured using a short exposure time. And this is what we need to do with the module of an image capturer.
 
 \begin{figure}[h]
 	\centering 
@@ -184,7 +189,7 @@ The system is implemented in four main modules. The four modules are presented b
 \end{enumerate}
 
 \subsection*{4.1 Beacon Controller}
-We deploy five LED beacons in a 60cm*60cm rectangle place as in figure 3, and we set the frequencies of the five beacons as 2000Hz, 2500Hz, 3000Hz, 3500Hz, 4000Hz, each with a coordinate of (-5,5,0), (5,5,0), (5,-5,0), (-5,-5,0) and (0,0,0). 
+We deploy five LED beacons in a 60cm*60cm rectangle place as in Figure 4, and we set the frequencies of the five beacons as 2000Hz, 2500Hz, 3000Hz, 3500Hz, 4000Hz, each with a coordinate of (-5,5,0), (5,5,0), (5,-5,0), (-5,-5,0) and (0,0,0). 
 The frequency of each LED beacon is controlled using Arduino DUE board. Arduino is a programmable open-source hardware. We exploit its clock and use bit operation to produce the 5 kinds of different frequencies, and using a transistor with several limiting resistors to work as a relay to drive a 25V DC circuit of 5 led luminaries.
 \begin{figure}[h]
 	\centering 
@@ -194,9 +199,28 @@ The frequency of each LED beacon is controlled using Arduino DUE board. Arduino 
 \end{figure}
 
 \subsection*{4.2 Camera}
-We choose to use the Lumia 1020 as our image capture device since it gives an excellent camera and its API of camera setting parameters are given by Nokia.
+We choose to use the Lumia 1020 as our image capture device since it gives an excellent camera and its API of camera setting parameters are given by Nokia which includes expose control of resolution, exposure time and film speed.
+
+We modify the Nokia Camera Explorer\cite{NCE} to build our application.We augment the app to expose the full range of resolution and exposure settings, and we add a streaming picture mode that continuously takes images as fast as the hardware will allow. And finally we transfer captured images to the server for image processing and apply AoA algorithm. Figure 5 is the view of the camera and its captured image presenting the rolling shutter effect.
+\begin{figure}[h]
+	\centering 
+	\includegraphics[width=0.8\linewidth]{Figure5.png}
+	\caption{Camera App and a captured image showing the rolling shutter effect}
+	\label{fig:subfig}
+\end{figure}
 
 \subsection*{4.3 Image Process Pipeline}
+The image process pipeline receives a captured image from the camera, and apply image processing on it. We name the leds on the image \textit{transmitters}. We must determine the corresponding relationship between transmitters and physical LED beacons so that we can apply AoA localization. As we introduced above, we use frequency as the pairing key, and exploits rolling shutter effect to discover frequency on the captured image. So the image process pipeline exploits OpenCV to locate transmitters and their coordinates on the image and tagged them with frequencies based on the rolling shutter effect.
+
+The pipeline's workflow is listed in Figure 6 below. We apply image processing methods 
+\begin{figure}[h]
+	\centering 
+	\includegraphics[width=0.8\linewidth]{Figure6.png}
+	\caption{Workflow of the image processing pipeline}
+	\label{fig:subfig}
+\end{figure}
+
+
 \subsection*{4.4 AoA}
 
 \section*{5. Evaluation and Conclusion}
