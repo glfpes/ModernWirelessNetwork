@@ -21,6 +21,22 @@
 
 \documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{bbding}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[lined,boxed,commentsnumbered,ruled]{algorithm2e}
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+\usepackage[all,cmtip]{xy}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{subfigure}
+
 \usepackage[protrusion=true,expansion=true]{microtype} % Better typography
 \usepackage{graphicx} % Required for including pictures
 \usepackage{wrapfig} % Allows in-line images
@@ -83,7 +99,7 @@ It has been very mature to locate one's position in the outdoors using GPS like 
 %	ESSAY BODY
 %----------------------------------------------------------------------------------------
 
-\section*{1. Introduction}
+\section{Introduction}
 
  Smart devices with cameras and LEDs are abundant in today's environment. This abundance creates an untapped opportunity for using these devices for wireless communication. Meanwhile, even if localization technology based on GPS developed maturely, we find the inconvenience with indoor localizations in malls or airports, which in fact in great need of the technology support of indoor localization since the environment is complex. Indoor localization serves these situations, and it can detect a wireless user's gesture, movement, or can do location-based authentication. In this article we draws a novel way by exploiting the LED lights to realize this indoor localization problem. 
 
@@ -93,15 +109,15 @@ This report does some survey on existing indoor localization methods and introdu
 
 %------------------------------------------------
 
-\section*{2. Related Works}
+\section{Related Works}
 Indoor localization has been worked on for years since its demand in industry is badly. We review four major representative work based on RF, acoustic, and MIMO techniques, the four main methods today in research of indoor localization. We analysis their defects to show the advancement in our work of Indoor Localization with LEDs.
 
-\subsection*{2.1 RF-based Localization \cite{Radar00} \cite{Centaur12}}
+\subsection{RF-based Localization \cite{Radar00} \cite{Centaur12}}
 WiFi-based indoor localization approaches have been the center of attention in the field of indoor localization, due to their low deployment cost, potential for reasonable accuracy and readiness to be applied to mobile devices. Existing WiFi-based solutions usually fall into one of two categories: fingerprint-based and model-based approaches. We introduce fingerprint-based method by the Radar system, and model-based by the Centaur system.
 
 While these methods have been shown to achieve promising localization accuracy (below 10 meters at 90\% tile) under lab conditions, large-scale accurate indoor localization systems have yet to be developed. For example, given realworld fingerprint sampling conditions, the localization accuracy of existing approaches in large venues like shopping malls and airports can still be up to 25m at 90\% tile; similar results are reported by Google\cite{google}
 
-\subsubsection*{2.1.1 RF-based Localization \cite{Radar00}}
+\subsubsection{RF-based Localization \cite{Radar00}}
 The fingeprint-based solution fingerprints locations in the area pf interest and then searches for the best matching location.
 
 The model-based solution trains a signal propagation model using training/calibration data then applies trilateration for localization. 
@@ -115,14 +131,14 @@ Radar first collects fingerprints from various known locations to build up a fin
 	\label{fig:subfig}
 \end{figure}
 
-\subsubsection*{2.1.2 RF-based Localization \cite{Centaur12}}
+\subsubsection{RF-based Localization \cite{Centaur12}}
 Centaur adopts the log-distance path loss (LDPL) model and trains model parameters from fingerprints with known locations. Model parameters instead of fingerprints are stored in the location database. Trilateration or multilateration is applied to estimate the location for an incoming fingerprint.
 
 Centaur and Radar are rooted at the irregularity of a \emph{radio map}, a map of signal strengths at different locations, and the ability to approximate the radio map from training data. The localization process is actually a process to find the best match(es) to a given fingerprint from the radio map and return the position of the best match(es). The better we can approximate the actual radio map, the better the localization accuracy that can be achieved.
 
 When the training data are sparse, the radio map cannot be well approximated with few fingerprints. However, under the assumption of a radio propagation model, the radio map can be better approximated. The model requires only a few samples to train the model parameter. On the contrary, when the training data are dense, distances between fingerprints are close. Thus, direct use of the fingerprints can well approximate the radio map, whereas an oversimplified omni-model will lead to a high fitness error.\cite{Modellet14}
 
-\subsection*{2.2 Acoustic-based Localization \cite{Cricket04}}
+\subsection{Acoustic-based Localization \cite{Cricket04}}
 Some systems exploits the acoustic band into the field of indoor localization. The Cricket system \cite{Cricket04} use a difference of ultrasound and RF signal time-of-flight measurement technique to provide location. The system requires to establish several anchor points in the indoor environment, each point can publish RF packets and ultrasonic signals. The workflow presents as below: 
 
 \begin{enumerate}
@@ -134,7 +150,7 @@ Some systems exploits the acoustic band into the field of indoor localization. T
 Cricket can reach high precise of several centimeters. However the drawback is its heavy hardware deployment requirement that limits its deployment.
 
 
-\subsection*{2.3 MIMO-based Localization \cite{Ubicarse14}}
+\subsection{MIMO-based Localization \cite{Ubicarse14}}
 MIMO technology develops rapidly recently in RF communication field. By exploiting multiple antennas, one device can locate its place precisely with the aid of multiple APs in the environment. Ubicarse exploits the fact that today's tablets and smartphones have two or at most three antennas. This system make use of these antennas to form a MIMO system. However only two-antennas MIMO can't get a good localization output, so Ubicarse defines a rotate movement, that the user rotates the two-antennas MIMO to form a circular antenna array as shown in Figure 2, by the simulated antenna array the system can get a considerable improvement in precise of less than 30 centimeters.
 \begin{figure}[h]
 	\centering 
@@ -145,7 +161,7 @@ MIMO technology develops rapidly recently in RF communication field. By exploiti
 
 %------------------------------------------------
 
-\section*{3. Problem Definition and Algorithm of Luxapose}
+\section{Problem Definition and Algorithm of Luxapose}
 Other systems such as Luxapose exploits the Visible Light Communication (VLC) technique. Luxapose use LED luminaries as visual light beacons. Landmarks are visible and distinguishable from each other. Location information is encoded by controllable frequencies. A phone receives these transmissions using its camera. By decoding the received signal, the phone get the location it lies.
 
 Using LED luminaries has an obvirous advantange that it needs hardly additional devices besides the LED luminaries, which distributed everywhere in modern indoor buildings. It also needs smartphones with cameras which are ubiquitous in modern society. And it can reach a high accuracy of 0.1m, can be viewed as one of the most precise methods in the field of IPS. The table below specifically shows the performance of the surveyed five indoor positioning systems.
@@ -179,7 +195,7 @@ In order to determine the corresponding relationship between beacons and transmi
 	\label{fig:subfig}
 \end{figure}
 
-\section*{4. System Modules Implementation}
+\section{System Modules Implementation}
 The system is implemented in four main modules. The four modules are presented below:
 \begin{enumerate}
 	\item Beacon Controller. It was implemented with Arduino DUE board. We presented five LEDs in one beacon for redundant.
@@ -188,7 +204,7 @@ The system is implemented in four main modules. The four modules are presented b
 	\item AoA. Its inputs are from the image processing pipeline, and using several given parameters, we apply the AoA algorithm to calculate the location of the user.
 \end{enumerate}
 
-\subsection*{4.1 Beacon Controller}
+\subsection{Beacon Controller}
 We deploy five LED beacons in a 60cm*60cm rectangle place as in Figure 4, and we set the frequencies of the five beacons as 2000Hz, 2500Hz, 3000Hz, 3500Hz, 4000Hz, each with a coordinate of (-5,5,0), (5,5,0), (5,-5,0), (-5,-5,0) and (0,0,0). 
 The frequency of each LED beacon is controlled using Arduino DUE board. Arduino is a programmable open-source hardware. We exploit its clock and use bit operation to produce the 5 kinds of different frequencies, and using a transistor with several limiting resistors to work as a relay to drive a 25V DC circuit of 5 led luminaries.
 \begin{figure}[h]
@@ -198,7 +214,7 @@ The frequency of each LED beacon is controlled using Arduino DUE board. Arduino 
 	\label{fig:subfig}
 \end{figure}
 
-\subsection*{4.2 Camera}
+\subsection{Camera}
 We choose to use the Lumia 1020 as our image capture device since it gives an excellent camera and its API of camera setting parameters are given by Nokia which includes expose control of resolution, exposure time and film speed.
 
 We modify the Nokia Camera Explorer\cite{NCE} to build our application.We augment the app to expose the full range of resolution and exposure settings, and we add a streaming picture mode that continuously takes images as fast as the hardware will allow. And finally we transfer captured images to the server for image processing and apply AoA algorithm. Figure 5 is the view of the camera and its captured image presenting the rolling shutter effect.
@@ -209,10 +225,11 @@ We modify the Nokia Camera Explorer\cite{NCE} to build our application.We augmen
 	\label{fig:subfig}
 \end{figure}
 
-\subsection*{4.3 Image Process Pipeline}
+\subsection{Image Process Pipeline}
 The image process pipeline receives a captured image from the camera, and apply image processing on it. We name the leds on the image \textit{transmitters}. We must determine the corresponding relationship between transmitters and physical LED beacons so that we can apply AoA localization. As we introduced above, we use frequency as the pairing key, and exploits rolling shutter effect to discover frequency on the captured image. So the image process pipeline exploits OpenCV to locate transmitters and their coordinates on the image and tagged them with frequencies based on the rolling shutter effect.
 
-The pipeline's workflow is listed in Figure 6 below. We apply image processing methods 
+The pipeline's workflow is listed in Figure 6 below. We apply image processing methods of the 1 to 4 steps to find the centroid and size of each transmitter on the captured image the transmitters on the image. In order to apply AoA, at least 3 identical transmitters must be located. We convert the image to grayscale, blur it, and pass it through a binary OTSU filter. We find contours for each blob and then find the minimum enclosing circle (or other shape) for each contour.After finding each of the transmitters, we examine each subregion of the image independently to decode data from each light.
+
 \begin{figure}[h]
 	\centering 
 	\includegraphics[width=0.8\linewidth]{Figure6.png}
@@ -220,10 +237,56 @@ The pipeline's workflow is listed in Figure 6 below. We apply image processing m
 	\label{fig:subfig}
 \end{figure}
 
+Once the centroid and extent of any landmarks are found in an image, the next step is to extract the data encoded in beacon transmissions in these regions using the method pf FFT. The method of frequency decoding samples the center row of pixels across an image subregion and takes an FFT of that vector.This requiring roughly 200 Hz of separation between adjacent frequencies to reliably decode. The Figure 7 below shows the result of a sample image after the manipulate of the image process pipeline.
+\begin{figure}[h]
+ 	\centering 
+ 	\includegraphics[width=0.8\linewidth]{Figure7.png}
+ 	\caption{Result of the image processing pipeline}
+ 	\label{fig:subfig}
+\end{figure}
 
-\subsection*{4.4 AoA}
 
-\section*{5. Evaluation and Conclusion}
+
+\subsection{AoA}
+\begin{figure}[h]
+	\centering 
+	\includegraphics[width=0.8\linewidth]{Figure8.png}
+	\caption{AoA Illustrated}
+	\label{fig:subfig}
+\end{figure}
+Our goal is to estimate the location and orientation of a smartphone assuming that we know bearings to three or more pointsources with known 3-D coordinates. And we discussed how we fuifill this precondition in the discussion above. The next is to apply AoA algorithm\cite{AoA} with these inputs. 
+AoA can be expressed in the Figure 8 below. Beacons are distinctly projected onto the image plane. Knowing the location of $T_j(x_j, y_j, z_j)$ in a global coordinate as we set before in section 4.1, amd their image $i_j(a_j, b_j, Z_f)_R$ in the image coordinates. This allow us to estimate the receiver's location and oritentation and here we only discuss how to exploit the inputs above to get the location.
+
+Assume the beacon $T_0$ with coordinates $(x_0, y_0, z_0)_B$ and its image $i_0(a_0, b_0, Z_f)_R$ where $Z_f$ is the distance between lens and CMOS imager and for lumia 1020 this parameter is a fixed constant for different image resolution. We assume (0,0,0) as the center of the lens, so $T_0$, the center of the lens and $i_0$ falls on the same line. By the geometry of similar triangles, we can define a scaling factor $K_0$ for beacon $T_0$, and describe $T_0$'s location $(u_0, v_0, w_0)$ in the receiver's coordinates as:
+
+ \begin{equation*}
+ \centering
+ \begin{split}
+ u_0 = K_0 \times a_0 \\
+ v_0 = K_0 \times b_0 \\
+ w_0 = K_0 \times Z_f
+ \end{split}
+ \end{equation*}
+
+AoA assumes that beacon locations are known. This allow us to express the pairwise disatance between beacons in both beacons' and receiver's coordinates. Equating the expressions in the two different domains yields a set of quadratic equations in which the only remaining unknowns are the scaling factors $K_0, K_1, \cdots$. In Figure 8 below, there are 3 beacons $T_0, T_1, T_2$ at locations of $(x_0, y_0, z_0), (x_1, y_1, z_1), (x_2, y_2, z_2)$ respectively. The pairwise distance between $T_0$ and $T_1$ can be expressed in both domains, and they are equated as follows:
+ \begin{equation*}
+ \centering
+ \begin{split}
+d_{0,1}^2 
+= (u_0 - u_1)^2 + (v_0 - v_1)^2 + (w_0 - w_1)^2 \\
+= (K_0a_0 - K_1a_1)^2 + (K_0b_0 - K_1b_1)^2 + Z_f^2(K_0 - K_1)^2 \\
+= K_0^2\overrightarrow{|Oi_0|}^2 + K_1^2\overrightarrow{|Oi_1|}^2 - 2K_0K_1(\overrightarrow{Oi_0}\overrightarrow{Oi_1}) \\
+=(x_0 - x_1)^2 + (y_0 - y_1)^2 + (z_0 - z_1)^2
+ \end{split}
+ \end{equation*}
+Where $\overrightarrow{Oi_0}$ and $\overrightarrow{Oi_1}$ are the vectors from the center of the lens to image $i_0(a_0, b_0, Z_f)$ and $i_1(a_1, b_1, Z_f)$, respectively. The only unknownms are $K_0$ and $K_1$. Three beacons would yield three quadratic equations in three unknown variables, allowing us to find $K_0, K_1, K_2$ and compute the beacons' locations in the receiver's coordinate.
+
+
+\section{Evaluation and Conclusion}
+We set up the experiment environment at the meeting office besides \#3, 126. And after the experiment we tested the farest location that can take a decodable image is roughly 12 meters, with less than 15 degrees since the beacons are set up at the ground. The positioning accuracy is high roughly with a deviation of less than 10cm.
+
+This work mainly includes two main parts: survey of modern IPS algorithms, and implements the Luxapose VLC IPS. The four modules, arduino, camera, image process pipeline and AoA, where the camera developed on Windows Phone 8 was provided by \cite{NCE}. And image process pipeline was coded on OpenCV using C++, and AoA is written in python script.
+
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
